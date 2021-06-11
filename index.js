@@ -3,6 +3,7 @@ const express = require('express');
 const googleDistanceMatrix = require('google-distance-matrix');
 const app = express()
 //const key = process.env.API_KEY;
+const port = process.env.PORT
 var distance = require('google-distance-matrix');
 var Datastore = require('nedb')
 require('dotenv').config();
@@ -80,4 +81,4 @@ app.get('/api', (request,response)=>{
     
 });
 
-app.listen(3000, ()=> console.log("app listening on port 3000"));
+app.listen(port || 3000, ()=> console.log("app listening on port 3000"));
