@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Distance App</title>
+</head>
+<body>
+    <h1>Distance Matrix App</h1>
+    <p>This App gives user shortest route to OAU Post Office from their location</p>
+    
+    <input type="text" placeholder="Latitude..." id="lat"><br>
+    <input type="text" placeholder="Longitude..." id="lon"><br>
+    <input type="text" placeholder="Bus route..." id="bus">
+    <button type="button" onclick="getInputValue();">Submit Location Info</button>
+    <script>
+        async function getInputValue(){
+            // Selecting the input element and get its value 
+            var lon = document.getElementById("lon").value;
+            var lat = document.getElementById("lat").value;
+            var bus = document.getElementById("bus").value;
+            // Displaying the value
+            console.log(lat,lon, bus)
+            const data = { lat, lon, bus };
+            const options = {
+                method: 'POST', // or 'PUT'
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+            }
+            const response=await fetch('/api', options)
+            dat=await response.json()
+            console.log(dat)
+
+        }
+    </script>
+    
+    
+</body>
+</html>
