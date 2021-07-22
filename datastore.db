@@ -11,6 +11,7 @@
 {"bus":"vbt","distance":"25.0 km","time":"32 mins","now":{"$$date":1622760908306},"_id":"GDaWk4Xx8O4g7soC"}
 {"bus":"Ikotun","distance":"77.6 km","time":"1 hour 53 mins","_id":"H7kEUs6a6NiPIzhF"}
 {"bus":"Ife","distance":"460 km","time":"8 hours 13 mins","now":{"$$date":1612887931296},"_id":"IWjEsW8bjxMCTZjF"}
+{"bus":"Sabo","distance":"195 km","time":"4 hours 5 mins","now":{"$$date":1623433889127},"_id":"JYK7vbAdXJI0aXWI"}
 {"bus":"Ilesa","distance":"42.3 km","time":"1 hour 3 mins","_id":"K7epzhIcvp3Yus8w"}
 {"bus":"Ilesa","distance":"42.3 km","time":"1 hour 3 mins","_id":"Ku4a90KSoIyHOFIq"}
 {"bus":"Ilesa","distance":"42.3 km","time":"1 hour 3 mins","_id":"LZq2VXwIADTitBTv"}
@@ -41,4 +42,3 @@
 {"bus":"vbt","distance":"24.9 km","time":"30 mins","now":{"$$date":1622760954342},"_id":"v5ARJUxeqAu64lh3"}
 {"bus":"vbt","distance":"23.5 km","time":"32 mins","now":{"$$date":1622761006884},"_id":"vtYpak9JdhmQOkOg"}
 {"bus":"Opa","distance":"8.7 km","time":"18 mins","now":{"$$date":1612969241547},"_id":"wuEqc7LRUNXxFuc1"}
-{"bus":"Sabo","distance":"195 km","time":"4 hours 5 mins","now":{"$$date":1623433889127},"_id":"JYK7vbAdXJI0aXWI"}
