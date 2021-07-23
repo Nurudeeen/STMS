@@ -12,7 +12,7 @@
     <input type="text" placeholder="Latitude..." id="lat"><br>
     <input type="text" placeholder="Longitude..." id="lon"><br>
     <input type="text" placeholder="Bus route..." id="bus">
-    <button type="button" onclick="getInputValue();">Submit Location Info</button>
+    <button type="button" onclick="getInputValue(),window.location.href='https://smart-management.herokuapp.com/all.html';">Submit Location Info</button>
     <button type="button" onclick="window.location.href='https://smart-management.herokuapp.com/all.html';">Bus Details Now</button>
     <script>
         async function getInputValue(){
