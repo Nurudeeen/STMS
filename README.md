@@ -1,5 +1,5 @@
 # STMS
-This project enatils the development of a smart public transportation system using Google Distance Matrix API.
+This project entails the development of a smart public transportation system using Google Distance Matrix API.
 the app gives the user infromation on the expectetd time of arrival (ETA) and the distance that remains for the bus to get to the destination.
 In this example, the destination is already fixed inthe backend in the form of a json object containing the longitude and latitude of the location.
 The system has also been extended in functionalities by adding an IOT based hardware that queries and get the information to display to the commuters.
