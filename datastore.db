@@ -1,5 +1,6 @@
 {"bus":"Holme","distance":"226 km","time":"4 hours 26 mins","now":{"$$date":1639757385839},"_id":"4TSs0ScRDXhLrIPr"}
 {"bus":"Opa","distance":"7.4 km","time":"15 mins","now":{"$$date":1612969663876},"_id":"4nb8zQNFKImamWLl"}
+{"bus":"Holme","distance":"226 km","time":"4 hours 26 mins","now":{"$$date":1639757594330},"_id":"5GDI01R9M8nF4hCY"}
 {"bus":"Ilesa","distance":"42.3 km","time":"1 hour 3 mins","_id":"69p67EdNBqu3Svoi"}
 {"bus":"","distance":"25.1 km","time":"32 mins","_id":"72qiV7hwOZ7Xg4RM"}
 {"bus":"Ikeja","distance":"85.8 km","time":"1 hour 38 mins","_id":"87KU4a4bytCLmj4X"}
@@ -46,4 +47,4 @@
 {"bus":"vbt","distance":"24.9 km","time":"30 mins","now":{"$$date":1622760954342},"_id":"v5ARJUxeqAu64lh3"}
 {"bus":"vbt","distance":"23.5 km","time":"32 mins","now":{"$$date":1622761006884},"_id":"vtYpak9JdhmQOkOg"}
 {"bus":"Opa","distance":"8.7 km","time":"18 mins","now":{"$$date":1612969241547},"_id":"wuEqc7LRUNXxFuc1"}
-{"bus":"Holme","distance":"226 km","time":"4 hours 26 mins","now":{"$$date":1639757594330},"_id":"5GDI01R9M8nF4hCY"}
+{"bus":"uio","distance":"108 km","time":"2 hours 31 mins","now":{"$$date":1640103864278},"_id":"KvEW2K8vhzSa5b9F"}
