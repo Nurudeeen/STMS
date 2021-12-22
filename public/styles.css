@@ -1,0 +1,62 @@
+h1 {
+    text-align: justify;
+   font-family: Lobster, monospace;
+   color: rgb(255, 166, 0)
+   
+ }
+ #lat {
+   margin: 5px;
+     border-radius: 5%;
+   border-color: rgb(0, 45, 128);
+   border-width: 5px;
+   border-style: solid;
+background-color: rgb(8, 5, 5);
+color: cornsilk;
+padding: 10px,10px,10px,10px
+ }
+ #lon {
+     margin: 5px;
+     border-radius: 5%;
+   border-color: rgb(0, 45, 128);
+   border-width: 5px;
+   border-style: solid;
+background-color: rgb(8, 5, 5);
+color: cornsilk;
+padding: 10px,10px,10px,10px
+ }
+ #place {
+  margin: 5px;
+  border-radius: 5%;
+border-color: rgb(0, 45, 128);
+border-width: 5px;
+border-style: solid;
+background-color: rgb(8, 5, 5);
+color: cornsilk;
+padding: 10px,10px,10px,10px
+}
+ #bus {
+     margin: 5px;
+     border-radius: 5%;
+   border-color: rgb(0, 45, 128);
+   border-width: 5px;
+   border-style: solid;
+background-color: rgb(8, 5, 5);
+color: cornsilk;
+padding: 10px,10px,10px,10px
+ }
+ body {
+     color: cornsilk;
+background-color: black;
+ }
+ p {
+     color: rgb(255, 166, 0);
+     font-family: 'Ubuntu', sans-serif;
+ }
+ h2 {
+  color: rgb(255, 166, 0);
+  font-family: 'Ubuntu', sans-serif;
+}
+h3 {
+  color: rgb(255, 166, 0);
+  font-family: 'Ubuntu', sans-serif;
+}

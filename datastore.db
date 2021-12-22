@@ -1,3 +1,4 @@
+{"bus":"Lagos","distance":"221 km","time":"4 hours 13 mins","now":{"$$date":1640173281145},"_id":"00KrSD9WnGbdJZgz"}
 {"bus":"Holme","distance":"226 km","time":"4 hours 26 mins","now":{"$$date":1639757385839},"_id":"4TSs0ScRDXhLrIPr"}
 {"bus":"Opa","distance":"7.4 km","time":"15 mins","now":{"$$date":1612969663876},"_id":"4nb8zQNFKImamWLl"}
 {"bus":"Holme","distance":"226 km","time":"4 hours 26 mins","now":{"$$date":1639757594330},"_id":"5GDI01R9M8nF4hCY"}
@@ -18,10 +19,13 @@
 {"bus":"Sabo","distance":"195 km","time":"4 hours 5 mins","now":{"$$date":1623433889127},"_id":"JYK7vbAdXJI0aXWI"}
 {"bus":"Ilesa","distance":"42.3 km","time":"1 hour 3 mins","_id":"K7epzhIcvp3Yus8w"}
 {"bus":"Ilesa","distance":"42.3 km","time":"1 hour 3 mins","_id":"Ku4a90KSoIyHOFIq"}
+{"bus":"uio","distance":"108 km","time":"2 hours 31 mins","now":{"$$date":1640103864278},"_id":"KvEW2K8vhzSa5b9F"}
 {"bus":"Ilesa","distance":"42.3 km","time":"1 hour 3 mins","_id":"LZq2VXwIADTitBTv"}
+{"bus":"Lagos","distance":"8.3 km","time":"19 mins","now":{"$$date":1640173161739},"_id":"Lu2hdMljv8NI2Djq"}
 {"bus":"Sabo","distance":"73.3 km","time":"1 hour 26 mins","now":{"$$date":1623410714634},"_id":"MaKpwPeNVa8S66ls"}
 {"bus":"vbt","distance":"22.6 km","time":"40 mins","now":{"$$date":1622761894361},"_id":"N0z3KvscCJbcLSyv"}
 {"bus":"Daood","distance":"192 km","time":"3 hours 14 mins","now":{"$$date":1623275767023},"_id":"OIn1BZHbJSC1IRN4"}
+{"bus":"Lagos","distance":"89.2 km","time":"2 hours 10 mins","now":{"$$date":1640173411454},"_id":"OgJawRCnxLdsEGJE"}
 {"bus":"vbt","distance":"24.9 km","time":"31 mins","now":{"$$date":1622760922142},"_id":"RcrkZ87Pjj0nr4Gj"}
 {"distance":"52.9 km","time":"50 mins","_id":"SXD2mavztelFgLz4"}
 {"bus":"Ikeja","distance":"85.8 km","time":"1 hour 38 mins","_id":"SmtryOWxNkAeY7dw"}
@@ -40,11 +44,16 @@
 {"bus":"vbt","distance":"25.1 km","time":"32 mins","now":{"$$date":1622760892099},"_id":"iVcjCz8xFG23SpqY"}
 {"bus":"Yaba Left","distance":"108 km","time":"2 hours 29 mins","now":{"$$date":1615223560743},"_id":"iVvVjMO2iQh0LE19"}
 {"bus":"vbt","distance":"25.5 km","time":"43 mins","now":{"$$date":1622761036836},"_id":"ifQ699C3Q0h6dW2C"}
+{"bus":"Gravity","distance":"196 km","time":"3 hours 44 mins","now":{"$$date":1640172404865},"_id":"jXoJIg7G8aYdRda4"}
+{"bus":"Ife","distance":"7,149 km","time":"4 days 0 hours","now":{"$$date":1640174002930},"_id":"kpsWnEknt6V4JKOd"}
 {"bus":"Enugu","distance":"304 km","time":"7 hours 1 min","now":{"$$date":1612886788608},"_id":"lsOUDP7XQvPSQUxD"}
+{"bus":"Ife","distance":"0.1 km","time":"1 min","now":{"$$date":1640174037379},"_id":"mDwzuUapLapgqrrr"}
+{"bus":"Lagos","distance":"6.8 km","time":"14 mins","now":{"$$date":1640173208068},"_id":"nfSs8AkayVIt209O"}
 {"bus":"vbt","distance":"24.2 km","time":"30 mins","now":{"$$date":1622760986905},"_id":"oIONfhL6KhT4ZW24"}
 {"bus":"Opa","distance":"3.9 km","time":"7 mins","now":{"$$date":1612970550919},"_id":"soeHaoXhnWtSYJWT"}
 {"bus":"vbt","distance":"119 km","time":"2 hours 7 mins","now":{"$$date":1622761686440},"_id":"uCwjWcuTPpbe9qOe"}
 {"bus":"vbt","distance":"24.9 km","time":"30 mins","now":{"$$date":1622760954342},"_id":"v5ARJUxeqAu64lh3"}
 {"bus":"vbt","distance":"23.5 km","time":"32 mins","now":{"$$date":1622761006884},"_id":"vtYpak9JdhmQOkOg"}
 {"bus":"Opa","distance":"8.7 km","time":"18 mins","now":{"$$date":1612969241547},"_id":"wuEqc7LRUNXxFuc1"}
-{"bus":"uio","distance":"108 km","time":"2 hours 31 mins","now":{"$$date":1640103864278},"_id":"KvEW2K8vhzSa5b9F"}
+{"bus":"Ife","distance":"0.1 km","time":"1 min","now":{"$$date":1640174243460},"_id":"EvoeBTzhkojrAZm1"}
+{"bus":"Ife","distance":"6.2 km","time":"12 mins","now":{"$$date":1640174463950},"_id":"hFPC5I3P94kYSUHt"}
