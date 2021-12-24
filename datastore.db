@@ -1,5 +1,6 @@
 {"bus":"Lagos","distance":"221 km","time":"4 hours 13 mins","now":{"$$date":1640173281145},"_id":"00KrSD9WnGbdJZgz"}
 {"bus":"Holme","distance":"226 km","time":"4 hours 26 mins","now":{"$$date":1639757385839},"_id":"4TSs0ScRDXhLrIPr"}
+{"bus":"Hoje","distance":"7.1 km","time":"17 mins","now":{"$$date":1640365698713},"_id":"4iBO1rRHCMNppGn6"}
 {"bus":"Opa","distance":"7.4 km","time":"15 mins","now":{"$$date":1612969663876},"_id":"4nb8zQNFKImamWLl"}
 {"bus":"Holme","distance":"226 km","time":"4 hours 26 mins","now":{"$$date":1639757594330},"_id":"5GDI01R9M8nF4hCY"}
 {"bus":"Ilesa","distance":"42.3 km","time":"1 hour 3 mins","_id":"69p67EdNBqu3Svoi"}
@@ -8,6 +9,7 @@
 {"bus":"Ilesa","distance":"105 km","time":"2 hours 17 mins","_id":"AQvxBxK1yjBne7XP"}
 {"distance":"65.2 km","time":"1 hour 36 mins","_id":"CHvEXaTSSHBOA5mF"}
 {"bus":"vbt","distance":"24.6 km","time":"30 mins","now":{"$$date":1622760965830},"_id":"D7eEsUVgSAerrQMm"}
+{"bus":"Hoje","distance":"193 km","time":"3 hours 32 mins","now":{"$$date":1640365250842},"_id":"E9GSq9g6pLooMyvL"}
 {"bus":"vbt","distance":"22.6 km","time":"40 mins","now":{"$$date":1622761864852},"_id":"ESaLPWCIb1ZBiiNa"}
 {"distance":"52.9 km","time":"50 mins","_id":"EaCWQgrFZdMLliZJ"}
 {"bus":"vbt","distance":"16.6 km","time":"32 mins","now":{"$$date":1622762446002},"_id":"EjbtzbzzHvRBrSCg"}
@@ -57,4 +59,5 @@
 {"bus":"vbt","distance":"24.9 km","time":"30 mins","now":{"$$date":1622760954342},"_id":"v5ARJUxeqAu64lh3"}
 {"bus":"vbt","distance":"23.5 km","time":"32 mins","now":{"$$date":1622761006884},"_id":"vtYpak9JdhmQOkOg"}
 {"bus":"Opa","distance":"8.7 km","time":"18 mins","now":{"$$date":1612969241547},"_id":"wuEqc7LRUNXxFuc1"}
-{"bus":"Hoje","distance":"193 km","time":"3 hours 32 mins","now":{"$$date":1640365250842},"_id":"E9GSq9g6pLooMyvL"}
+{"bus":"Wizard","distance":"66.4 km","time":"1 hour 12 mins","now":{"$$date":1640365845580},"_id":"bB9bbd1XFwMriwBH"}
+{"bus":"Xinshina","distance":"1.0 km","time":"2 mins","now":{"$$date":1640365987357},"_id":"HmXd64SYGtTQGWCW"}
