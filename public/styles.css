@@ -7,8 +7,8 @@ h1 {
  #lat {
    margin: 5px;
      border-radius: 5%;
-   border-color: rgb(0, 45, 128);
-   border-width: 5px;
+   border-color:green;
+   border-width: 1px;
    border-style: solid;
 background-color: rgb(8, 5, 5);
 color: cornsilk;
@@ -17,8 +17,8 @@ padding: 10px,10px,10px,10px
  #lon {
      margin: 5px;
      border-radius: 5%;
-   border-color: rgb(0, 45, 128);
-   border-width: 5px;
+   border-color:green;
+   border-width: 1px;
    border-style: solid;
 background-color: rgb(8, 5, 5);
 color: cornsilk;
@@ -27,8 +27,8 @@ padding: 10px,10px,10px,10px
  #place {
   margin: 5px;
   border-radius: 5%;
-border-color: rgb(0, 45, 128);
-border-width: 5px;
+border-color: green;
+border-width: 1px;
 border-style: solid;
 background-color: rgb(8, 5, 5);
 color: cornsilk;
@@ -37,8 +37,8 @@ padding: 10px,10px,10px,10px
  #bus {
      margin: 5px;
      border-radius: 5%;
-   border-color: rgb(0, 45, 128);
-   border-width: 5px;
+   border-color: green;
+   border-width: 1px;
    border-style: solid;
 background-color: rgb(8, 5, 5);
 color: cornsilk;

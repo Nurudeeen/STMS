@@ -11,6 +11,7 @@
 {"bus":"vbt","distance":"22.6 km","time":"40 mins","now":{"$$date":1622761864852},"_id":"ESaLPWCIb1ZBiiNa"}
 {"distance":"52.9 km","time":"50 mins","_id":"EaCWQgrFZdMLliZJ"}
 {"bus":"vbt","distance":"16.6 km","time":"32 mins","now":{"$$date":1622762446002},"_id":"EjbtzbzzHvRBrSCg"}
+{"bus":"Ife","distance":"0.1 km","time":"1 min","now":{"$$date":1640174243460},"_id":"EvoeBTzhkojrAZm1"}
 {"bus":"vbt","distance":"25.0 km","time":"32 mins","now":{"$$date":1622760908306},"_id":"GDaWk4Xx8O4g7soC"}
 {"bus":"Holme","distance":"226 km","time":"4 hours 26 mins","now":{"$$date":1639756907472},"_id":"GxiNDP8qTNIervgF"}
 {"bus":"Ikotun","distance":"77.6 km","time":"1 hour 53 mins","_id":"H7kEUs6a6NiPIzhF"}
@@ -40,6 +41,7 @@
 {"distance":"87.7 km","time":"2 hours 7 mins","_id":"bcwQfEcClmOU9j9C"}
 {"bus":"Ilesa","distance":"105 km","time":"2 hours 17 mins","_id":"c6c9I0HIWlmZFYBF"}
 {"bus":"Ilesa","distance":"25.1 km","time":"32 mins","_id":"gH2ovTNzx4Baau3o"}
+{"bus":"Ife","distance":"6.2 km","time":"12 mins","now":{"$$date":1640174463950},"_id":"hFPC5I3P94kYSUHt"}
 {"distance":"71.6 km","time":"1 hour 48 mins","_id":"hirUqeJKDdJrD7v7"}
 {"bus":"vbt","distance":"25.1 km","time":"32 mins","now":{"$$date":1622760892099},"_id":"iVcjCz8xFG23SpqY"}
 {"bus":"Yaba Left","distance":"108 km","time":"2 hours 29 mins","now":{"$$date":1615223560743},"_id":"iVvVjMO2iQh0LE19"}
@@ -55,5 +57,4 @@
 {"bus":"vbt","distance":"24.9 km","time":"30 mins","now":{"$$date":1622760954342},"_id":"v5ARJUxeqAu64lh3"}
 {"bus":"vbt","distance":"23.5 km","time":"32 mins","now":{"$$date":1622761006884},"_id":"vtYpak9JdhmQOkOg"}
 {"bus":"Opa","distance":"8.7 km","time":"18 mins","now":{"$$date":1612969241547},"_id":"wuEqc7LRUNXxFuc1"}
-{"bus":"Ife","distance":"0.1 km","time":"1 min","now":{"$$date":1640174243460},"_id":"EvoeBTzhkojrAZm1"}
-{"bus":"Ife","distance":"6.2 km","time":"12 mins","now":{"$$date":1640174463950},"_id":"hFPC5I3P94kYSUHt"}
+{"bus":"Hoje","distance":"193 km","time":"3 hours 32 mins","now":{"$$date":1640365250842},"_id":"E9GSq9g6pLooMyvL"}
