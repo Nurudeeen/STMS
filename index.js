@@ -127,5 +127,30 @@ app.get('/api', (request,response)=>{
     })
     
 });
-
+app.get('/api/busOne', (request,response)=>{
+    //gets latest input into database from post request
+     
+     db.find({bus:"busOne"}).sort({now: -1}).limit(1).exec((err, dat)=>{
+         if (err){
+             response.end
+             return
+         }
+         console.log(dat[0]);
+         response.json(dat[0])
+     })
+     
+ });
+ app.get('/api/busTwo', (request,response)=>{
+    //gets latest input into database from post request
+     
+     db.find({bus:"busTwo"}).sort({now: -1}).limit(1).exec((err, dat)=>{
+         if (err){
+             response.end
+             return
+         }
+         console.log(dat[0]);
+         response.json(dat[0])
+     })
+     
+ });
 app.listen(port || 3000, ()=> console.log("app listening on port 3000"));
