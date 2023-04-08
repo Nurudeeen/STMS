@@ -93,6 +93,7 @@ app.post('/place',(request,response)=>{
                         console.log(bus+' bus'+ ' is ' +distance+ ' away');
                         now = new Date ()
                         var info = {bus, distance, time, now}
+                        console.log(info)
                         response.json({
                             status: 'Server Connected to Client',
                                 distance: info.distance,
