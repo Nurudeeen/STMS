@@ -41,11 +41,10 @@ distance.matrix(origins, destinations, function (err, distances) {
                 if (distances.rows[0].elements[0].status == 'OK') {
                     var time = distances.rows[0].elements[0].duration.text;
                     var distance = distances.rows[0].elements[0].distance.text;
-                    console.log('The '+bus+' bus will arrive in '+time);
-                    console.log(bus+' bus'+ ' is ' +distance+ ' away');
+                    // console.log('The '+bus+' bus will arrive in '+time);
+                    // console.log(bus+' bus'+ ' is ' +distance+ ' away');
                     now = new Date ()
                     var info = {bus, distance, time, now}
-                    console.log(info)
                     response.json({
                         status: 'Server Connected to Client',
                             distance: info.distance,
@@ -90,11 +89,10 @@ app.post('/place',(request,response)=>{
                     if (distances.rows[0].elements[0].status == 'OK') {
                         var time = distances.rows[0].elements[0].duration.text;
                         var distance = distances.rows[0].elements[0].distance.text;
-                        console.log('The '+bus+' bus will arrive in '+time);
-                        console.log(bus+' bus'+ ' is ' +distance+ ' away');
+                        // console.log('The '+bus+' bus will arrive in '+time);
+                        // console.log(bus+' bus'+ ' is ' +distance+ ' away');
                         now = new Date ()
                         var info = {bus, distance, time, now}
-                        console.log(info)
                         response.json({
                             status: 'Server Connected to Client',
                                 distance: info.distance,
@@ -146,6 +144,19 @@ app.get('/api/busOne', (request,response)=>{
     //gets latest input into database from post request
      
      db.find({bus:"busTwo"}).sort({now: -1}).limit(1).exec((err, dat)=>{
+         if (err){
+             response.end
+             return
+         }
+         console.log(dat[0]);
+         response.json(dat[0])
+     })
+     
+ });
+ app.get('/api/MCIP_Bus', (request,response)=>{
+    //gets latest input into database from post request
+     
+     db.find({bus:"MCIP_Bus"}).sort({now: -1}).limit(1).exec((err, dat)=>{
          if (err){
              response.end
              return
