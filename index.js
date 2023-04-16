@@ -134,7 +134,7 @@ app.get('/api', (req, res) => {
             return
         }
         console.log(dat[0]);
-        response.json(dat[0])
+        res.json(dat[0])
     })
 
 });
@@ -164,7 +164,7 @@ app.get('/api/busTwo', (req, res) => {
     })
 
 });
-app.get('/api/MCIP_Bus', (request, response) => {
+app.get('/api/MCIP_Bus', (req, res) => {
     //gets latest input into database from post request
 
     db.find({ bus: "MCIP_Bus" }).sort({ now: -1 }).limit(1).exec((err, dat) => {
