@@ -44,7 +44,7 @@ app.post('/api', (req, res) => {
                     var dist = distanceNumber[0]
                     if (Number(dist) >= 20) {
                         var now = new Date()
-                        var info = { bus, distance, now, time, message: 'out of coverage' }
+                        var info = { bus, distance, time, now, message: 'out of coverage' }
                         db.insert(info)
                         return res.json({
                             status: 'Server Connected to Client',
