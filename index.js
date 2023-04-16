@@ -39,6 +39,7 @@ app.post('/api', (req, res) => {
             for (let i = 1; i < destinations.length; i++) {
                 if (distances.rows[0].elements[i].status == 'OK') {
                     var distance = distances.rows[0].elements[i].distance.text;
+                    var time = distances.rows[0].elements[0].duration.text;
                     distanceNumber = distance.split(" ")
                     var dist = distanceNumber[0]
                     if (Number(dist) >= 20) {
