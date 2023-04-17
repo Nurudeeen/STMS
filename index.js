@@ -1,10 +1,26 @@
 const express = require('express');
 const app = express()
-const port = process.env.PORT
 var distance = require('google-distance-matrix');
 
 var Datastore = require('nedb')
+
+
 require('dotenv').config();
+const port = process.env.PORT
+
+const mongoose = require ("mongoose");
+const MONG_URL = process.env.LOCAL_MONGO_URI
+
+const Transport = require("./models/Transport")
+
+const cors = require("cors");
+
+
+app.use(cors(
+    {
+        credentials: true
+    }
+));
 
 app.use(express.static('public'));
 app.use(express.json())
@@ -25,7 +41,7 @@ app.post('/api', (req, res) => {
     bus = data.bus
     var destinations = ['7.519554708957414, 4.5210832268552394', '7.499780, 4.452675', '7.550273, 4.510744', '7.486708, 4.547672', '7.540701, 4.578502'];
 
-    distance.matrix(origins, destinations, function (err, distances) {
+    distance.matrix(origins, destinations, async (err, distances)=> {
         if (err) {
             return console.log(err);
         }
@@ -46,11 +62,20 @@ app.post('/api', (req, res) => {
                         var now = new Date()
                         var info = { bus, distance, time, now, message: 'out of coverage' }
                         db.insert(info)
-                        return res.json({
-                            status: 'Server Connected to Client',
-                            distance: info.distance,
-                            message: info.message
+                        const newTransport = new Transport(info);
+                        try{
+                            const transport = await newTransport.save();
+                            return res.json({
+                                status: 'Server Connected to Client',
+                                distance: transport.distance,
+                                message: transport.message
                         })
+                        
+                        }catch (err){
+                            console.log(err);
+                            res.status(500).json({error: err})
+                        }
+
                     }
                     continue
 
@@ -64,11 +89,19 @@ app.post('/api', (req, res) => {
                 var now = new Date()
                 var info = { bus, distance, time, now, message: 'all good' }
                 db.insert(info)
-                return res.json({
-                    status: 'Server Connected to Client',
-                    distance: info.distance,
-                    time: info.time
+                const newTransport = new Transport(info);
+                try{
+                    const transport = await newTransport.save();
+                    return res.json({
+                        status: 'Server Connected to Client',
+                        distance: transport.distance,
+                        message: transport.message
                 })
+                
+                }catch (err){
+                    console.log(err);
+                    res.status(500).json({error: err})
+                }
 
 
             }
@@ -129,57 +162,56 @@ app.post('/place', (req, res) => {
 app.get('/api', (req, res) => {
     //gets latest input into database from post request
 
-    db.find({}).sort({ now: -1 }).limit(1).exec((err, dat) => {
-        if (err) {
-            console.log(err)
+    // db.find({}).sort({ now: -1 }).limit(1).exec((err, dat) => {
+    //     if (err) {
+    //         console.log(err)
             
-            return res.status(400).send(err)
-        }
-        console.log(dat[0]);
-        return res.status(200).json(dat[0])
+    //         return res.status(400).send(err)
+    //     }
+    //     console.log(dat[0]);
+    //     return res.status(200).json(dat[0])
+    // })
+    Transport.findOne().sort({$natural: -1}).limit(1).then( data => {
+
+            return res.status(200).json(data)
+     
     })
+    
 
 });
 app.get('/api/busOne', (req, res) => {
     //gets latest input into database from post request
 
-    db.find({ bus: "busOne" }).sort({ now: -1 }).limit(1).exec((err, dat) => {
-        if (err) {
-            console.log(err)
-            
-            return res.status(400).send(err)
-        }
-        console.log(dat[0]);
-        return res.status(200).json(dat[0])
-    })
+    Transport.findOne({bus:'busOne'}).sort({$natural: -1}).limit(1).then( data => {
 
+        return res.status(200).json(data)
+ 
+ })
 });
 app.get('/api/busTwo', (req, res) => {
     //gets latest input into database from post request
+    Transport.findOne({bus:'busTwo'}).sort({$natural: -1}).limit(1).then( data => {
 
-    db.find({ bus: "busTwo" }).sort({ now: -1 }).limit(1).exec((err, dat) => {
-        if (err) {
-            console.log(err)
-            
-            return res.status(400).send(err)
-        }
-        console.log(dat[0]);
-        return res.status(200).json(dat[0])
-    })
+        return res.status(200).json(data)
+ 
+})
 
 });
+
 app.get('/api/MCIP_Bus', (req, res) => {
     //gets latest input into database from post request
 
-    db.find({ bus: "MCIP_Bus" }).sort({ now: -1 }).limit(1).exec((err, dat) => {
-        if (err) {
-            console.log(err)
-            
-            return res.status(400).send(err)
-        }
-        console.log(dat[0]);
-        return res.status(200).json(dat[0])
-    })
+    Transport.findOne({bus:"MCIP_Bus"}).sort({$natural: -1}).limit(1).then( data => {
 
+        return res.status(200).json(data)
+ 
+})
 });
+
+mongoose.connect(MONG_URL).then (() => {
+    console.log("DB connected successfully")
+}).catch((err)=>{
+    console.log(err)
+});
+
 app.listen(port || 3000, () => console.log("app listening on port 3000"));
