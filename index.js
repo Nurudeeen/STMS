@@ -136,7 +136,7 @@ app.get('/api', (req, res) => {
             return res.status(400).send(err)
         }
         console.log(dat[0]);
-        res.json(dat[0])
+        return res.status(200).json(dat[0])
     })
 
 });
@@ -150,7 +150,7 @@ app.get('/api/busOne', (req, res) => {
             return res.status(400).send(err)
         }
         console.log(dat[0]);
-        res.json(dat[0])
+        return res.status(200).json(dat[0])
     })
 
 });
@@ -164,7 +164,7 @@ app.get('/api/busTwo', (req, res) => {
             return res.status(400).send(err)
         }
         console.log(dat[0]);
-        res.json(dat[0])
+        return res.status(200).json(dat[0])
     })
 
 });
@@ -178,7 +178,7 @@ app.get('/api/MCIP_Bus', (req, res) => {
             return res.status(400).send(err)
         }
         console.log(dat[0]);
-        res.json(dat[0])
+        return res.status(200).json(dat[0])
     })
 
 });
