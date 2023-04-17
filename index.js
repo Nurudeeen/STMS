@@ -131,8 +131,9 @@ app.get('/api', (req, res) => {
 
     db.find({}).sort({ now: -1 }).limit(1).exec((err, dat) => {
         if (err) {
-            res.end
-            return
+            console.log(err)
+            
+            return res.status(400).send(err)
         }
         console.log(dat[0]);
         res.json(dat[0])
@@ -144,8 +145,9 @@ app.get('/api/busOne', (req, res) => {
 
     db.find({ bus: "busOne" }).sort({ now: -1 }).limit(1).exec((err, dat) => {
         if (err) {
-            res.end
-            return
+            console.log(err)
+            
+            return res.status(400).send(err)
         }
         console.log(dat[0]);
         res.json(dat[0])
@@ -157,8 +159,9 @@ app.get('/api/busTwo', (req, res) => {
 
     db.find({ bus: "busTwo" }).sort({ now: -1 }).limit(1).exec((err, dat) => {
         if (err) {
-            res.end
-            return
+            console.log(err)
+            
+            return res.status(400).send(err)
         }
         console.log(dat[0]);
         res.json(dat[0])
@@ -170,8 +173,9 @@ app.get('/api/MCIP_Bus', (req, res) => {
 
     db.find({ bus: "MCIP_Bus" }).sort({ now: -1 }).limit(1).exec((err, dat) => {
         if (err) {
-            res.end
-            return
+            console.log(err)
+            
+            return res.status(400).send(err)
         }
         console.log(dat[0]);
         res.json(dat[0])
