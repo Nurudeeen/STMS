@@ -2,16 +2,16 @@ const express = require('express');
 const app = express()
 var distance = require('google-distance-matrix');
 
-//var Datastore = require('nedb')
+var Datastore = require('nedb')
 
 
 require('dotenv').config();
 const port = process.env.PORT
 
-const mongoose = require ("mongoose");
-const MONG_URL = process.env.LOCAL_MONGO_URI
+//const mongoose = require ("mongoose");
+//const MONG_URL = process.env.LOCAL_MONGO_URI
 
-const Transport = require("./models/Transport")
+//const Transport = require("./models/Transport")
 
 const cors = require("cors");
 
@@ -28,8 +28,8 @@ distance.units('metric');
 distance.key(process.env.API_KEY);
 distance.mode('driving');
 
-// db = new Datastore('datastore.db');
-// db.loadDatabase();
+db = new Datastore('datastore.db');
+db.loadDatabase();
 
 
 app.post('/api', (req, res) => {
@@ -61,20 +61,20 @@ app.post('/api', (req, res) => {
                     if (Number(dist) >= 20) {
                         var now = new Date()
                         var info = { bus, distance, time, now, message: 'out of coverage' }
-                        //db.insert(info)
-                        const newTransport = new Transport(info);
-                        try{
-                            const transport = await newTransport.save();
-                            return res.json({
-                                status: 'Server Connected to Client',
-                                distance: transport.distance,
-                                message: transport.message
-                        })
+                        db.insert(info)
+                        // const newTransport = new Transport(info);
+                        // try{
+                        //     const transport = await newTransport.save();
+                        //     return res.json({
+                        //         status: 'Server Connected to Client',
+                        //         distance: transport.distance,
+                        //         message: transport.message
+                        // })
                         
-                        }catch (err){
-                            console.log(err);
-                            res.status(500).json({error: err})
-                        }
+                        // }catch (err){
+                        //     console.log(err);
+                        //     res.status(500).json({error: err})
+                        // }
 
                     }
                     continue
@@ -88,20 +88,20 @@ app.post('/api', (req, res) => {
                 var distance = distances.rows[0].elements[0].distance.text;
                 var now = new Date()
                 var info = { bus, distance, time, now, message: 'all good' }
-                //db.insert(info)
-                const newTransport = new Transport(info);
-                try{
-                    const transport = await newTransport.save();
-                    return res.json({
-                        status: 'Server Connected to Client',
-                        distance: transport.distance,
-                        message: transport.message
-                })
+                db.insert(info)
+                // const newTransport = new Transport(info);
+                // try{
+                //     const transport = await newTransport.save();
+                //     return res.json({
+                //         status: 'Server Connected to Client',
+                //         distance: transport.distance,
+                //         message: transport.message
+                // })
                 
-                }catch (err){
-                    console.log(err);
-                    res.status(500).json({error: err})
-                }
+                // }catch (err){
+                //     console.log(err);
+                //     res.status(500).json({error: err})
+                // }
 
 
             }
@@ -144,7 +144,7 @@ app.post('/place', (req, res) => {
                     time: info.time
                 })
 
-                //db.insert(info)
+                db.insert(info)
 
                 // db.update({bus: 'Ikeja'}, {distance: distance, time: time}, {}, function(err, numReplaced){
                 //     if(err) console.log(err);
@@ -162,56 +162,56 @@ app.post('/place', (req, res) => {
 app.get('/api', (req, res) => {
     //gets latest input into database from post request
 
-    // db.find({}).sort({ now: -1 }).limit(1).exec((err, dat) => {
-    //     if (err) {
-    //         console.log(err)
+    db.find({}).sort({ now: -1 }).limit(1).exec((err, dat) => {
+        if (err) {
+            console.log(err)
             
-    //         return res.status(400).send(err)
-    //     }
-    //     console.log(dat[0]);
-    //     return res.status(200).json(dat[0])
-    // })
-    Transport.findOne().sort({$natural: -1}).limit(1).then( data => {
-
-            return res.status(200).json(data)
-     
+            return res.status(400).send(err)
+        }
+        console.log(dat[0]);
+        return res.status(200).json(dat[0])
     })
+    // Transport.findOne().sort({$natural: -1}).limit(1).then( data => {
+
+    //         return res.status(200).json(data)
+     
+    // })
     
 
 });
-app.get('/api/busOne', (req, res) => {
-    //gets latest input into database from post request
+// app.get('/api/busOne', (req, res) => {
+//     //gets latest input into database from post request
 
-    Transport.findOne({bus:'busOne'}).sort({$natural: -1}).limit(1).then( data => {
+//     Transport.findOne({bus:'busOne'}).sort({$natural: -1}).limit(1).then( data => {
 
-        return res.status(200).json(data)
+//         return res.status(200).json(data)
  
- })
-});
-app.get('/api/busTwo', (req, res) => {
-    //gets latest input into database from post request
-    Transport.findOne({bus:'busTwo'}).sort({$natural: -1}).limit(1).then( data => {
+//  })
+// });
+// app.get('/api/busTwo', (req, res) => {
+//     //gets latest input into database from post request
+//     Transport.findOne({bus:'busTwo'}).sort({$natural: -1}).limit(1).then( data => {
 
-        return res.status(200).json(data)
+//         return res.status(200).json(data)
  
-})
+// })
 
-});
+// });
 
-app.get('/api/MCIP_Bus', (req, res) => {
-    //gets latest input into database from post request
+// app.get('/api/MCIP_Bus', (req, res) => {
+//     //gets latest input into database from post request
 
-    Transport.findOne({bus:"MCIP_Bus"}).sort({$natural: -1}).limit(1).then( data => {
+//     Transport.findOne({bus:"MCIP_Bus"}).sort({$natural: -1}).limit(1).then( data => {
 
-        return res.status(200).json(data)
+//         return res.status(200).json(data)
  
-})
-});
+// })
+// });
 
-mongoose.connect(MONG_URL).then (() => {
-    console.log("DB connected successfully")
-}).catch((err)=>{
-    console.log(err)
-});
+// mongoose.connect(MONG_URL).then (() => {
+//     console.log("DB connected successfully")
+// }).catch((err)=>{
+//     console.log(err)
+// });
 
 app.listen(port || 3000, () => console.log("app listening on port 3000"));
