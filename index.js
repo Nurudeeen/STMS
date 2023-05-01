@@ -2,7 +2,7 @@ const express = require('express');
 const app = express()
 var distance = require('google-distance-matrix');
 
-var Datastore = require('nedb')
+//var Datastore = require('nedb')
 
 
 require('dotenv').config();
@@ -28,8 +28,8 @@ distance.units('metric');
 distance.key(process.env.API_KEY);
 distance.mode('driving');
 
-db = new Datastore('datastore.db');
-db.loadDatabase();
+// db = new Datastore('datastore.db');
+// db.loadDatabase();
 
 
 app.post('/api', (req, res) => {
@@ -61,7 +61,7 @@ app.post('/api', (req, res) => {
                     if (Number(dist) >= 20) {
                         var now = new Date()
                         var info = { bus, distance, time, now, message: 'out of coverage' }
-                        db.insert(info)
+                        //db.insert(info)
                         const newTransport = new Transport(info);
                         try{
                             const transport = await newTransport.save();
@@ -88,7 +88,7 @@ app.post('/api', (req, res) => {
                 var distance = distances.rows[0].elements[0].distance.text;
                 var now = new Date()
                 var info = { bus, distance, time, now, message: 'all good' }
-                db.insert(info)
+                //db.insert(info)
                 const newTransport = new Transport(info);
                 try{
                     const transport = await newTransport.save();
@@ -144,7 +144,7 @@ app.post('/place', (req, res) => {
                     time: info.time
                 })
 
-                db.insert(info)
+                //db.insert(info)
 
                 // db.update({bus: 'Ikeja'}, {distance: distance, time: time}, {}, function(err, numReplaced){
                 //     if(err) console.log(err);
