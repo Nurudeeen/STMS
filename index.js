@@ -13,14 +13,14 @@ const port = process.env.PORT
 
 //const Transport = require("./models/Transport")
 
-const cors = require("cors");
+//const cors = require("cors");
 
 
-app.use(cors(
-    {
-        credentials: true
-    }
-));
+// app.use(cors(
+//     {
+//         credentials: true
+//     }
+// ));
 
 app.use(express.static('public'));
 app.use(express.json())
