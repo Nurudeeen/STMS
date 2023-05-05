@@ -94,8 +94,8 @@ app.post('/api', (req, res) => {
                 //     const transport = await newTransport.save();
                 return res.json({
                         status: 'Server Connected to Client',
-                        distance: transport.distance,
-                        message: transport.message
+                        distance: info.distance,
+                        message: info.message
                 })
                 
                 // }catch (err){
