@@ -117,7 +117,7 @@ app.post('/place', (req, res) => {
   bus = data.bus;
   var destinations = ['7.519554708957414, 4.5210832268552394'];
 
-  distance.matrix(origins, destinations, function (err, distances) {
+  distance.matrix(origins, destinations, async function (err, distances) {
     if (err) {
       return console.log(err);
     }
