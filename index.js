@@ -13,13 +13,13 @@ const mongoose = require('mongoose');
 const MONG_URL = process.env.LOCAL_MONGO_URI;
 
 const Transport = require('./models/Transport');
-const cors = require("cors");
+// const cors = require("cors");
 
-app.use(cors(
-    {
-        credentials: true
-    }
-));
+// app.use(cors(
+//     {
+//         credentials: true
+//     }
+// ));
 
 app.use(express.static('public'));
 app.use(express.json());
