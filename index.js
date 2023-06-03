@@ -1,7 +1,9 @@
 const express = require('express');
 const app = express();
-var distance = require('google-distance-matrix');
+var morgan = require('morgan')
 
+var distance = require('google-distance-matrix');
+morgan(':method :url :status :res[content-length] - :response-time ms')
 //var Datastore = require('nedb')
 
 require('dotenv').config();
@@ -11,7 +13,6 @@ const mongoose = require('mongoose');
 const MONG_URL = process.env.LOCAL_MONGO_URI;
 
 const Transport = require('./models/Transport');
-
 const cors = require("cors");
 
 app.use(cors(
