@@ -200,10 +200,10 @@ app.get('/api/busTwo', (req, res) => {
     });
 });
 
-app.get('/api/MCIP_Bus', (req, res) => {
+app.get('/api/MCIP', (req, res) => {
   //gets latest input into database from post request
 
-  Transport.findOne({ bus: 'MCIP_Bus' })
+  Transport.findOne({ bus: 'MCIP' })
     .sort({ $natural: -1 })
     .limit(1)
     .then((data) => {
