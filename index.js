@@ -207,7 +207,6 @@ app.get('/api/MCIP', (req, res) => {
     .sort({ $natural: -1 })
     .limit(1)
     .then((data) => {
-      console.log(data)
       return res.status(200).json(data);
     });
 });
