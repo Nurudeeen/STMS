@@ -38,11 +38,11 @@ app.post('/api', (req, res) => {
   origins[0] = data.lat + ', ' + data.lon;
   bus = data.bus;
   var destinations = [
-    '7.519554708957414, 4.5210832268552394',
-    '7.499780, 4.452675',
-    '7.550273, 4.510744',
-    '7.486708, 4.547672',
-    '7.540701, 4.578502',
+    '7.519554708957414, 4.5210832268552394',// coord for WH
+    '7.52126, 4.51848',
+    '7.52057, 4.52354',
+    '7.51755, 4.52225',
+    '7.51862, 4.51851', // coods for geofence
   ];
 
   distance.matrix(origins, destinations, async (err, distances) => {
@@ -62,9 +62,9 @@ app.post('/api', (req, res) => {
           var time = distances.rows[0].elements[0].duration.text;
           distanceNumber = distance.split(' ');
           var dist = distanceNumber[0];
-          if (Number(dist) >= 20) {
+          if (Number(dist) >= 1) {
             var now = new Date();
-            var info = { bus, distance, time, now, message: 'out of coverage' };
+            var info = { bus, distance, time, now, message: 'off route' };
             //db.insert(info)
             const newTransport = new Transport(info);
             try {
