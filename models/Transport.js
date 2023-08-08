@@ -15,6 +15,18 @@ const TransportSchema = new mongoose.Schema({
     message: {
         type: String,
     },
+    
+    lat: {
+        type: String,
+    },
+
+    lon: {
+        type: String,
+    },
+
+    place:{
+        type: String
+    }
 },
 { timestamps: true}
 );

@@ -64,11 +64,11 @@ app.post('/api', (req, res) => {
           var dist = distanceNumber[0];
           if (Number(dist) >= 1) {
             var now = new Date();
-            var info = { bus, distance, time, now, message: 'off route' };
+            var info = { bus, distance, time, now, message: 'off route',lat: data.lat, lon: data.lon  };
             //db.insert(info)
             const newTransport = new Transport(info);
             try {
-              const transport = await newTransport.save();
+              await newTransport.save();
               return res.json({
                 status: 'Server Connected to Client',
                 distance: info.distance,
@@ -84,27 +84,6 @@ app.post('/api', (req, res) => {
         console.log(destination + ' is too far from ' + origin);
         res.json(destination + ' is too far from ' + origin);
       }
-      if (distances.rows[0].elements[0].status == 'OK') {
-        var time = distances.rows[0].elements[0].duration.text;
-        var distance = distances.rows[0].elements[0].distance.text;
-        var now = new Date();
-        var info = { bus, distance, time, now, message: 'all good' };
-        //db.insert(info)
-        const newTransport = new Transport(info);
-        try {
-          const transport = await newTransport.save();
-          return res.json({
-            status: 'Server Connected to Client',
-            distance: info.distance,
-            message: info.message,
-          });
-        } catch (err) {
-          console.log(err);
-          res.status(500).json({ error: err });
-        }
-      }
-      console.log(destination + ' is too far from ' + origin);
-      res.json(destination + ' is too far from ' + origin);
     }
   });
 });
@@ -134,7 +113,7 @@ app.post('/place', (req, res) => {
         // console.log('The '+bus+' bus will arrive in '+time);
         // console.log(bus+' bus'+ ' is ' +distance+ ' away');
         now = new Date();
-        var info = { bus, distance, time, now };
+        var info = { bus, distance, time, now, place: data.place };
         const newTransport = new Transport(info);
         try {
           const transport = await newTransport.save();
