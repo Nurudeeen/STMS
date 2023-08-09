@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan')
-
+var cors = require('cors')
+app.use(cors())
 const distance = require('google-distance-matrix');
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
 //var Datastore = require('nedb')
