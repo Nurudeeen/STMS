@@ -63,7 +63,7 @@ app.post('/api', (req, res) => {
           var time = distances.rows[0].elements[0].duration.text;
           distanceNumber = distance.split(' ');
           var dist = distanceNumber[0];
-          if (Number(dist) >= 1) {
+          if (Number(dist) >= 2) {
             var now = new Date();
             var info = { bus, distance, time, now, message: 'off route',lat: data.lat, lon: data.lon  };
             //db.insert(info)
